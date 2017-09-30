@@ -1,0 +1,33 @@
+.jumbotron {
+  color: rgb(7, 19, 38);
+  background: #ecf0f1;
+}
+
+li {
+  list-style-type: none;
+}
+
+.year {
+  color: silver;
+}
+
+.title, .year {
+  text-align: center;
+}
+
+.movie {
+  width: 30%;
+  float: left;
+  margin: 1.66%;
+}
+
+/*make posters of fixed size*/
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  height: 400px;
+}
+
+/*.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  width: 30%;
+  float: left;
+  margin: 1.66%;
+}*/

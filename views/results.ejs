@@ -1,0 +1,34 @@
+<% include partials/header %>
+
+<h1>Search Results</h1>
+<a href="/">Search again!</a>
+
+<div class="row">
+  <% data["Search"].forEach(function(value, index) { %>
+    <div class="movie col-lg-4 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= value["Poster"] %>" alt="movie poster">
+      </div>
+      <div class="title">
+        <%= value["Title"] %>
+      </div>
+      <div class="year">
+        <%= value["Year"] %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+<!-- end of row -->
+
+<!--
+<% data["Search"].forEach(function(value, index) { %>
+  <img src="<%= value["Poster"] %>" alt="movie poster">
+  <ul>
+    <li><%= value["Title"] %></li>
+    <li><%= value["Year"] %></li>
+  </ul>
+<% }); %>
+-->
+
+
+<% include partials/footer %>
