@@ -1,12 +1,3 @@
-.jumbotron {
-  color: rgb(7, 19, 38);
-  background: #ecf0f1;
-}
-
-li {
-  list-style-type: none;
-}
-
 .year {
   color: silver;
 }
@@ -31,3 +22,8 @@ li {
   float: left;
   margin: 1.66%;
 }*/
+
+a {
+  display: block;
+  text-align: right;
+}

@@ -1,0 +1,43 @@
+a {
+  display: block;
+  text-align: right;
+}
+
+.title {
+  font-size: 4rem;
+}
+
+.left-subtitle * {
+  float: left;
+  margin: 1.66%;
+}
+
+.year, .runtime, .rated {
+  width: 8%;
+}
+
+.genre {
+  width: 20%;
+}
+
+.fa-star {
+  float: right;
+  font-size: 48px;
+  color: gold;
+}
+
+.rating {
+  font-size: 20px;
+}
+
+.votes, .rating span {
+  font-size: 14px;
+}
+
+.plot {
+  padding-bottom: 20px;
+}
+
+.info {
+  padding-top: 20px;
+}

@@ -23,6 +23,19 @@ app.get("/results", function(req, res) {
   });
 });
 
+app.get("/movie", function(req, res) {
+  var query = req.query.title;
+  console.log(query);
+  var url = "http://www.omdbapi.com/?apikey=thewdb&type=movie&plot=full&t=" + query;
+
+  request(url, function(error, response, body) {
+    if (!error && response.statusCode === 200) {
+      var data = JSON.parse(body);
+      res.render("movie", {data: data});
+    }
+  });
+});
+
 app.get("*", function(req, res) {
   res.send("Page not found");
 });

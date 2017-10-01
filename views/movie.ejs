@@ -1,0 +1,61 @@
+<% include partials/header %>
+<link rel="stylesheet" href="/movie-style.css" type="text/css">
+
+<h1>Movie Details</h1>
+<a href="/">Search again!</a>
+
+<div class="title"><%= data["Title"] %></div>
+
+<div class="row">
+  <div class="col-lg-10">
+    <div class="left-subtitle">
+      <div class="year"><%= data["Year"] %></div>
+      <div class="runtime"><%= data["Runtime"] %></div>
+      <div class="rated"><%= data["Rated"] %></div>
+      <div class="genre"><%= data["Genre"] %></div>
+    </div>
+  </div>
+
+  <div class="col-lg-2">
+    <div class="row">
+      <div class="col-lg-6">
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div class="col-lg-6">
+        <div class="right-subtitle">
+          <div class="rating"><%= data["imdbRating"] %><span>/10</span></div>
+          <div class="votes"><%= data["imdbVotes"] %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-4">
+    <div class="thumbnail">
+      <img src="<%= data["Poster"] %>" alt="movie poster">
+    </div>
+  </div>
+
+  <div class="col-lg-8">
+    <div class="description">
+      <div class="plot"><%= data["Plot"] %></div>
+
+      <div class="director">Director: <%= data["Director"] %></div>
+      <div class="writer">Writers: <%= data["Writer"] %></div>
+      <div class="actors">Actors: <%= data["Actors"] %></div>
+      <div class="awards">Awards: <%= data["Awards"] %></div>
+
+      <div class="info">
+        <p>Additional information</p>
+        <div class="tomatoes">Rotten Tomatoes: <%= data["Ratings"][1]["Value"] %></div>
+        <div class="language">Language: <%= data["Language"] %></div>
+        <div class="country">Country: <%= data["Country"] %></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% include partials/footer %>
