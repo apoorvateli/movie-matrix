@@ -1,14 +1,37 @@
-.jumbotron {
-  color: rgb(7, 19, 38);
-  background: #ecf0f1;
+body {
+  background: url("/images/movie-1-search-bg.jpg");
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  color: white;
 }
 
-.input-group {
-  width: 40%;
-  margin: 0 auto;
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Lato, sans-serif;
+}
+
+.heading {
+  padding: 5% 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 5em;
 }
 
 h2 {
+  padding-bottom: 20px;
+}
+
+/*.jumbotron {
+  color: rgb(7, 19, 38);
+  background: #ecf0f1;
   text-align: center;
+}*/
+
+.input-group {
+  width: 50%;
+  margin: 0 auto;
 }

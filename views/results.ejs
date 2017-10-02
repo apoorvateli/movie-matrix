@@ -1,8 +1,14 @@
 <% include partials/header %>
 <link rel="stylesheet" href="/results-style.css" type="text/css">
 
-<h2>Search Results</h2>
-<a href="/">Search again!</a>
+<div class="row heading">
+  <div class="col-lg-9 search-results">
+    <h3>Search Results</h3>
+  </div>
+  <div class="col-lg-3 search-again">
+    <i class="fa fa-search" aria-hidden="true"></i> <a href="/">Search again!</a>
+  </div>
+</div>
 
 <div class="row">
   <% data["Search"].forEach(function(value, index) { %>
@@ -13,7 +19,7 @@
       <div class="title">
         <form action="/movie" method="GET">
           <!-- <input type="hidden" name="title" value="<%= value["Title"] %>"> -->
-          <button type="submit" name="title" value="<%= value["Title"] %>" ><%= value["Title"] %></button>
+          <button type="submit" name="title" value="<%= value["Title"] %>" class="btn btn-default"><%= value["Title"] %></button>
         </form>
         <!-- <%= value["Title"] %> -->
       </div>

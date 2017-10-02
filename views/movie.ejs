@@ -1,8 +1,14 @@
 <% include partials/header %>
 <link rel="stylesheet" href="/movie-style.css" type="text/css">
 
-<h2>Movie Details</h2>
-<a href="/">Search again!</a>
+<div class="row heading">
+  <div class="col-lg-9">
+    <h3>Movie Details</h3>
+  </div>
+  <div class="col-lg-3 search-again">
+    <i class="fa fa-search" aria-hidden="true"></i> <a href="/">Search again!</a>
+  </div>
+</div>
 
 <div class="title"><%= data["Title"] %></div>
 
@@ -31,7 +37,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row movie-details">
   <div class="col-lg-4">
     <div class="thumbnail">
       <img src="<%= data["Poster"] %>" alt="movie poster">
@@ -42,12 +48,14 @@
     <div class="description">
       <div class="plot"><%= data["Plot"] %></div>
 
-      <div class="director">Director: <%= data["Director"] %></div>
-      <div class="writer">Writers: <%= data["Writer"] %></div>
-      <div class="actors">Actors: <%= data["Actors"] %></div>
-      <div class="awards">Awards: <%= data["Awards"] %></div>
-
       <div class="info">
+        <div class="director">Director: <%= data["Director"] %></div>
+        <div class="writer">Writers: <%= data["Writer"] %></div>
+        <div class="actors">Actors: <%= data["Actors"] %></div>
+        <div class="awards">Awards: <%= data["Awards"] %></div>
+      </div>
+
+      <div class="additional-info">
         <p>Additional information</p>
         <div class="released">Release Date: <%= data["Released"] %></div>
         <div class="language">Language: <%= data["Language"] %></div>

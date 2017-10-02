@@ -1,3 +1,14 @@
+.search-again, a {
+  text-align: right;
+  margin-top: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.heading {
+  padding: 0 1.66%;
+}
+
 .year {
   color: silver;
 }
@@ -22,8 +33,3 @@
   float: left;
   margin: 1.66%;
 }*/
-
-a {
-  display: block;
-  text-align: right;
-}

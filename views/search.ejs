@@ -1,19 +1,21 @@
 <% include partials/header %>
 <link rel="stylesheet" href="/search-style.css" type="text/css">
 
-<div class="jumbotron">
+<div class="heading">
   <h1><i class="fa fa-film" aria-hidden="true"></i> The Movie Gallery</h1>
 </div>
 
-<h2>Search for movies</h2>
+<div class="content">
+  <h2>Discover Great Movies</h2>
 
-<form action="/results" method="GET">
-  <div class="input-group">
-    <input type="text" placeholder="search term" name="search" class="form-control">
-    <span class="input-group-btn">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </span>
-  </div>  <!-- /input-group -->
-</form>
+  <form action="/results" method="GET">
+    <div class="input-group">
+      <input type="text" placeholder="search term" name="search" class="form-control">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary">Go!</button>
+      </span>
+    </div>  <!-- /input-group -->
+  </form>
+</div>
 
 <% include partials/footer %>
