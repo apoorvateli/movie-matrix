@@ -1,7 +1,7 @@
 <% include partials/header %>
 <link rel="stylesheet" href="/movie-style.css" type="text/css">
 
-<h1>Movie Details</h1>
+<h2>Movie Details</h2>
 <a href="/">Search again!</a>
 
 <div class="title"><%= data["Title"] %></div>
@@ -49,7 +49,7 @@
 
       <div class="info">
         <p>Additional information</p>
-        <div class="tomatoes">Rotten Tomatoes: <%= data["Ratings"][1]["Value"] %></div>
+        <div class="released">Release Date: <%= data["Released"] %></div>
         <div class="language">Language: <%= data["Language"] %></div>
         <div class="country">Country: <%= data["Country"] %></div>
       </div>

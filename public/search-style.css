@@ -1,4 +1,14 @@
 .jumbotron {
   color: rgb(7, 19, 38);
   background: #ecf0f1;
+  text-align: center;
+}
+
+.input-group {
+  width: 40%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
 }

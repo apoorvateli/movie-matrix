@@ -3,14 +3,17 @@
 
 <div class="jumbotron">
   <h1><i class="fa fa-film" aria-hidden="true"></i> The Movie Gallery</h1>
-  <p>Search for movies</p>
 </div>
 
-<h1>Search for movies</h1>
+<h2>Search for movies</h2>
 
 <form action="/results" method="GET">
-  <input type="text" placeholder="search term" name="search">
-  <input type="submit">
+  <div class="input-group">
+    <input type="text" placeholder="search term" name="search" class="form-control">
+    <span class="input-group-btn">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </span>
+  </div>  <!-- /input-group -->
 </form>
 
 <% include partials/footer %>
