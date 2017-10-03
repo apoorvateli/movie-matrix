@@ -18,8 +18,15 @@
   width: 5%;
 }
 
-.runtime, .rated {
+.runtime {
   width: 8%;
+}
+
+.rated {
+  width: 12%;
+}
+
+.runtime, .rated {
   text-align: center;
   border-left: 2px solid #888;
 }
