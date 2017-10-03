@@ -17,7 +17,6 @@ app.get("/results", function(req, res) {
   request(url, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       var data = JSON.parse(body);
-      // res.send(data["Search"][0]["Title"]);
       res.render("results", {data: data});
     }
   });

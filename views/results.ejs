@@ -11,35 +11,38 @@
 </div>
 
 <div class="row">
-  <% data["Search"].forEach(function(value, index) { %>
-    <div class="movie col-lg-4 col-sm-6">
-      <div class="thumbnail">
-        <img src="<%= value["Poster"] %>" alt="movie poster">
-      </div>
-      <div class="title">
-        <form action="/movie" method="GET">
-          <!-- <input type="hidden" name="title" value="<%= value["Title"] %>"> -->
-          <button type="submit" name="title" value="<%= value["Title"] %>" class="btn btn-default"><%= value["Title"] %></button>
-        </form>
-        <!-- <%= value["Title"] %> -->
-      </div>
-      <div class="year">
-        <%= value["Year"] %>
-      </div>
+  <% if ( data["Response"] === "False" ) { %>
+    <div class="jumbotron">
+      <h2>Aww, snap...
+        <br>No movie found!
+        <br>Try searching for another term
+      </h2>
+      <button class="btn btn-primary btn-lg search-btn">
+        <i class="fa fa-search" aria-hidden="true"></i> <a href="/">Search Again</a>
+      </button>
     </div>
-  <% }); %>
+  <% } else { %>
+    <% data["Search"].forEach(function(value, index) { %>
+      <div class="movie col-lg-4 col-sm-6">
+        <div class="thumbnail">
+          <img src="<%= value["Poster"] %>" alt="movie poster">
+        </div>
+        <div class="title">
+          <form action="/movie" method="GET">
+            <!-- <input type="hidden" name="title" value="<%= value["Title"] %>"> -->
+            <button type="submit" name="title" value="<%= value["Title"] %>" class="btn btn-default"><%= value["Title"] %></button>
+          </form>
+          <!-- <%= value["Title"] %> -->
+        </div>
+        <div class="year">
+          <%= value["Year"] %>
+        </div>
+      </div>
+    <% }); %>
+  <% } %>
+
+
 </div>
 <!-- end of row -->
-
-<!--
-<% data["Search"].forEach(function(value, index) { %>
-  <img src="<%= value["Poster"] %>" alt="movie poster">
-  <ul>
-    <li><%= value["Title"] %></li>
-    <li><%= value["Year"] %></li>
-  </ul>
-<% }); %>
--->
-
 
 <% include partials/footer %>
