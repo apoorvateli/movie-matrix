@@ -56,9 +56,14 @@
       </div>
 
       <div class="trailer">
-        <a href="https://www.youtube.com/results?search_query=trailer+<%= data["Title"] %>" target="-_blank" class="btn btn-danger" role="button">
-          <i class="fa fa-video-camera" aria-hidden="true"></i> Trailer
+        <a href="https://www.youtube.com/results?search_query=<%= data["Title"] %>" target="-_blank" class="btn btn-danger" role="button">
+          <i class="fa fa-video-camera" aria-hidden="true"></i> Related Videos
         </a>
+      </div>
+
+      <a href="<%= trailerLink %>">Youtube</a>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= watchID %>?rel=0" allowfullscreen></iframe>
       </div>
 
       <div class="additional-info">

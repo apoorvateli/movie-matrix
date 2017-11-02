@@ -1,6 +1,7 @@
 var express = require("express");
 var app = express();
 var request = require("request");
+const movieTrailer = require('movie-trailer');
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -30,7 +31,16 @@ app.get("/movie", function(req, res) {
   request(url, function(error, response, body) {
     if (!error && response.statusCode === 200) {
       var data = JSON.parse(body);
-      res.render("movie", {data: data});
+
+      movieTrailer(data["Title"], (err, url) => {
+        // console.log(url); //=> http://path/to/trailer e.g. https://www.youtube.com/watch?v=PbdM1db3JbY
+        var watchID = url.slice(url.indexOf("=")+1);
+        // console.log(watchID);  // PbdM1db3JbY
+        var trailerLink = url;
+        res.render("movie", {data: data, trailerLink: trailerLink, watchID: watchID});
+      });
+
+      // res.render("movie", {data: data});
     }
   });
 });
