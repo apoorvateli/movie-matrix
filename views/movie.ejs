@@ -55,13 +55,19 @@
         <div class="awards">Awards: <%= data["Awards"] %></div>
       </div>
 
-      <div class="trailer">
-        <a href="https://www.youtube.com/results?search_query=<%= data["Title"] %>" target="-_blank" class="btn btn-danger" role="button">
+      <div class="videos">
+        <a href="https://www.youtube.com/results?search_query=<%= data["Title"] %>" target="_blank" class="btn btn-danger" role="button">
           <i class="fa fa-video-camera" aria-hidden="true"></i> Related Videos
         </a>
       </div>
 
-      <a href="<%= trailerLink %>">Youtube</a>
+      <div class="songs">
+        <a href="https://www.youtube.com/results?search_query=songs+<%= data["Title"] %>" target="_blank" class="btn btn-danger" role="button">
+          <i class="fa fa-music" aria-hidden="true"></i> Songs from <%= data["Title"] %>
+        </a>
+      </div>
+
+      <!-- <a href="<%= trailerLink %>">Youtube Trailer</a> -->
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= watchID %>?rel=0" allowfullscreen></iframe>
       </div>
