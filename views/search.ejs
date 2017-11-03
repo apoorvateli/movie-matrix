@@ -18,4 +18,64 @@
   </form>
 </div>
 
+<div>Opening this week
+  <% homeData["openingThisWeek"].forEach(function(value, index) { %>
+    <div class="movie col-lg-4 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= value["Poster"] %>" alt="movie poster">
+      </div>
+      <div class="title">
+        <form action="/movie" method="GET">
+          <!-- <input type="hidden" name="title" value="<%= value["title"] %>"> -->
+          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-default"><%= value["title"] %></button>
+        </form>
+        <!-- <%= value["title"] %> -->
+      </div>
+      <div class="date">
+        <%= value["date"] %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+<div>Box Office
+  <% homeData["boxOffice"].forEach(function(value, index) { %>
+    <div class="movie col-lg-4 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= value["Poster"] %>" alt="movie poster">
+      </div>
+      <div class="title">
+        <form action="/movie" method="GET">
+          <!-- <input type="hidden" name="title" value="<%= value["title"] %>"> -->
+          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-default"><%= value["title"] %></button>
+        </form>
+        <!-- <%= value["title"] %> -->
+      </div>
+      <div class="gross">
+        <%= value["gross"] %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
+<div>Coming Soon
+  <% homeData["comingSoon"].forEach(function(value, index) { %>
+    <div class="movie col-lg-4 col-sm-6">
+      <div class="thumbnail">
+        <img src="<%= value["Poster"] %>" alt="movie poster">
+      </div>
+      <div class="title">
+        <form action="/movie" method="GET">
+          <!-- <input type="hidden" name="title" value="<%= value["title"] %>"> -->
+          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-default"><%= value["title"] %></button>
+        </form>
+        <!-- <%= value["title"] %> -->
+      </div>
+      <div class="gross">
+        <%= value["gross"] %>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
 <% include partials/footer %>

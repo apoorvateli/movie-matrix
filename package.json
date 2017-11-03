@@ -12,6 +12,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.1",
     "movie-trailer": "^1.0.3",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "rt-scraper": "^1.0.5"
   }
 }

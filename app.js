@@ -1,13 +1,27 @@
 var express = require("express");
 var app = express();
 var request = require("request");
-const movieTrailer = require('movie-trailer');
+const movieTrailer = require('movie-trailer'); // returns Youtube trailer link
+var rtscraper = require("rt-scraper");  // returns top, coming soon movies to be displayed on homepage
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res) {
-  res.render("search");
+
+  rtscraper.getRottenTomatoesScraperData( function(error, data) {
+    if (!error) {
+      // console.log(JSON.stringify(data, null, 2));
+      var homeData = JSON.stringify(data, null, 2);
+      homeData = JSON.parse(homeData);
+      res.render("search", {homeData: homeData});
+    }
+    else {
+      console.log('Some error occured.');
+    }
+  });
+
+  // res.render("search");
 });
 
 app.get("/results", function(req, res) {
