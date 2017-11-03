@@ -1,9 +1,23 @@
+body {
+  /*background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/Dark-Forest-High-Resolution-Wallpaper.jpg);*/
+  background: url(/images/trees.jpg);
+  color: white;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.2),
+               0px 18px 23px rgba(0,0,0,0.2);
+}
+
 .search-again, a {
   text-align: right;
   margin-top: 20px;
-  color: #333;
+  color: white;
   font-size: 2rem;
 }
+
+.search-again a:hover {
+  color: white;
+}
+
 
 .title {
   font-size: 4rem;
@@ -58,8 +72,27 @@
 .movie-details {
   padding: 20px 0;
 }
-/*
+
+.additional-info {
+  padding: 20px 0 0 0;
+}
+
 .trailer {
-  padding: 0 0 20px 0;
-  margin: 0;
-}*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 span {
+	color: #d72a18;
+}
+
+.btn-danger {
+  color: #fff;
+  background-color: #d72a18;
+  border-color: #d43f3a;
+}
+
+.thumbnail {
+  background: black;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}

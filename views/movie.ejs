@@ -3,10 +3,10 @@
 
 <div class="row heading">
   <div class="col-lg-9">
-    <h3>Movie Details</h3>
+    <h3>Movie <span>Tracer</span></h3>
   </div>
   <div class="col-lg-3 search-again">
-    <i class="fa fa-search" aria-hidden="true"></i> <a href="/">Search again!</a>
+    <i class="fa fa-search" aria-hidden="true"></i> <a href="/">Search</a>
   </div>
 </div>
 
@@ -67,11 +67,6 @@
         </a>
       </div>
 
-      <!-- <a href="<%= trailerLink %>">Youtube Trailer</a> -->
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= watchID %>?rel=0" allowfullscreen></iframe>
-      </div>
-
       <div class="additional-info">
         <p>Additional information</p>
         <div class="released">Release Date: <%= data["Released"] %></div>
@@ -82,5 +77,9 @@
   </div>
 </div>
 
+<!-- <a href="<%= trailerLink %>">Youtube Trailer</a> -->
+<div class="embed-responsive embed-responsive-16by9 trailer">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= watchID %>?rel=0" allowfullscreen></iframe>
+</div>
 
 <% include partials/footer %>
