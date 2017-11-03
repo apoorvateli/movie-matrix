@@ -5,7 +5,7 @@
   <h1><i class="fa fa-film" aria-hidden="true"></i> The Movie Gallery</h1>
 </div>
 
-<div class="content">
+<div class="search-content">
   <h2>Discover Great Movies</h2>
 
   <form action="/results" method="GET">
@@ -18,16 +18,17 @@
   </form>
 </div>
 
-<div>Opening this week
+<div class="row">
+  <div class="sub-heading">Opening This Week</div>
+
   <% homeData["openingThisWeek"].forEach(function(value, index) { %>
-    <div class="movie col-lg-4 col-sm-6">
-      <div class="thumbnail">
+    <div class="movie col-lg-4 col-sm-6 thumbnail">
+      <!-- <div class="thumbnail">
         <img src="<%= value["Poster"] %>" alt="movie poster">
-      </div>
+      </div> -->
       <div class="title">
         <form action="/movie" method="GET">
-          <!-- <input type="hidden" name="title" value="<%= value["title"] %>"> -->
-          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-default"><%= value["title"] %></button>
+          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-link"><%= value["title"] %></button>
         </form>
         <!-- <%= value["title"] %> -->
       </div>
@@ -38,16 +39,15 @@
   <% }); %>
 </div>
 
-<div>Box Office
+<div class="row">
+  <div class="sub-heading">Box Office</div>
+
   <% homeData["boxOffice"].forEach(function(value, index) { %>
-    <div class="movie col-lg-4 col-sm-6">
-      <div class="thumbnail">
-        <img src="<%= value["Poster"] %>" alt="movie poster">
-      </div>
+    <div class="movie col-lg-4 col-sm-6 thumbnail">
+
       <div class="title">
         <form action="/movie" method="GET">
-          <!-- <input type="hidden" name="title" value="<%= value["title"] %>"> -->
-          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-default"><%= value["title"] %></button>
+          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-link"><%= value["title"] %></button>
         </form>
         <!-- <%= value["title"] %> -->
       </div>
@@ -58,16 +58,14 @@
   <% }); %>
 </div>
 
-<div>Coming Soon
+<div class="row">
+  <div class="sub-heading">Coming Soon</div>
+
   <% homeData["comingSoon"].forEach(function(value, index) { %>
-    <div class="movie col-lg-4 col-sm-6">
-      <div class="thumbnail">
-        <img src="<%= value["Poster"] %>" alt="movie poster">
-      </div>
+    <div class="movie col-lg-4 col-sm-6 thumbnail">
       <div class="title">
         <form action="/movie" method="GET">
-          <!-- <input type="hidden" name="title" value="<%= value["title"] %>"> -->
-          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-default"><%= value["title"] %></button>
+          <button type="submit" name="title" value="<%= value["title"] %>" class="btn btn-link"><%= value["title"] %></button>
         </form>
         <!-- <%= value["title"] %> -->
       </div>

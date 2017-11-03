@@ -14,6 +14,7 @@ app.get("/", function(req, res) {
       // console.log(JSON.stringify(data, null, 2));
       var homeData = JSON.stringify(data, null, 2);
       homeData = JSON.parse(homeData);
+
       res.render("search", {homeData: homeData});
     }
     else {
