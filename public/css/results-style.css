@@ -27,6 +27,11 @@ body {
   text-decoration: none;
 }
 
+.search-btn a, .search-btn a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .btn-link, .btn-link:active, .btn-link:focus, .btn-link:hover {
   color: white;
 }

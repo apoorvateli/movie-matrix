@@ -49,10 +49,11 @@ app.get("/movie", function(req, res) {
 
       movieTrailer(data["Title"], (err, url) => {
         // console.log(url); //=> http://path/to/trailer e.g. https://www.youtube.com/watch?v=PbdM1db3JbY
-        var watchID = url.slice(url.indexOf("=")+1);
+          var watchID = url.slice(url.indexOf("=")+1);
+
         // console.log(watchID);  // PbdM1db3JbY
-        var trailerLink = url;
-        res.render("movie", {data: data, trailerLink: trailerLink, watchID: watchID});
+        // var trailerLink = url;
+        res.render("movie", {data: data, watchID: watchID}); //  trailerLink: trailerLink,
       });
 
       // res.render("movie", {data: data});
