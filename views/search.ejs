@@ -5,6 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
 <link href="/css/search-style.css" rel="stylesheet" type="text/css" />
+
 <script src="/js/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="/js/cufon-yui.js" type="text/javascript"></script>
 <script src="/js/cufon-replace.js" type="text/javascript"></script>
@@ -74,7 +75,7 @@
           <h3>Box <span>Office</span></h3>
 
           <% homeData["boxOffice"].forEach(function(value, index) { %>
-            <div class="movie col-lg-4 col-sm-4 thumbnail">
+            <div class="movie col-lg-4 col-sm-6 thumbnail">
 
               <div class="border-right">
                 <div class="border-left">
@@ -153,11 +154,7 @@
               </div>
               <div class="field">
                 <label>Your E-mail:</label>
-                <input type="text" value=""/>
-              </div>
-              <div class="field">
-                <label>Your Website:</label>
-                <input type="text" value=""/>
+                <input type="email" value=""/>
               </div>
               <div class="field">
                 <label>Your Message:</label>
