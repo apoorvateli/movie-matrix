@@ -1,8 +1,11 @@
+require('dotenv').config();
+
 var express = require("express");
 var app = express();
 var request = require("request");
 const movieTrailer = require('movie-trailer'); // returns Youtube trailer link
 var rtscraper = require("rt-scraper");  // returns top, coming soon movies to be displayed on homepage
+var apiKey = process.env.API_KEY;
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -28,7 +31,7 @@ app.get("/", function(req, res) {
 app.get("/results", function(req, res) {
   var query = req.query.search;
   console.log(query);
-  var url = "http://www.omdbapi.com/?apikey=thewdb&type=movie&s=" + query;
+  var url = "http://www.omdbapi.com/?apikey=" + apiKey + "&type=movie&s=" + query;
 
   request(url, function(error, response, body) {
     if (!error && response.statusCode === 200) {
@@ -41,7 +44,8 @@ app.get("/results", function(req, res) {
 app.get("/movie", function(req, res) {
   var query = req.query.title;
   console.log(query);
-  var url = "http://www.omdbapi.com/?apikey=thewdb&type=movie&plot=full&t=" + query;
+  // var url = "http://www.omdbapi.com/?apikey=thewdb&type=movie&plot=full&t=" + query;
+  var url = "http://www.omdbapi.com/?apikey=" + apiKey + "&type=movie&plot=full&t=" + query;
 
   request(url, function(error, response, body) {
     if (!error && response.statusCode === 200) {
