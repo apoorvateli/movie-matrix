@@ -22,7 +22,7 @@ app.get("/", function(req, res) {
       res.render("search", {homeData: homeData});
     }
     else {
-      console.log('Some error occured.');
+      // console.log('Some error occured.');
     }
   });
 
@@ -31,7 +31,7 @@ app.get("/", function(req, res) {
 
 app.get("/results", function(req, res) {
   var query = req.query.search;
-  console.log(query);
+  // console.log(query);
   var url = "http://www.omdbapi.com/?apikey=" + apiKey + "&type=movie&s=" + query;
 
   request(url, function(error, response, body) {
@@ -44,7 +44,7 @@ app.get("/results", function(req, res) {
 
 app.get("/movie", function(req, res) {
   var query = req.query.title;
-  console.log(query);
+  // console.log(query);
   // var url = "http://www.omdbapi.com/?apikey=thewdb&type=movie&plot=full&t=" + query;
   var url = "http://www.omdbapi.com/?apikey=" + apiKey + "&type=movie&plot=full&t=" + query;
 
@@ -71,5 +71,5 @@ app.get("*", function(req, res) {
 });
 
 app.listen(PORT, function() {
-  console.log("Serving movie-search-app on port "+PORT);
+  // console.log("Serving movie-search-app on port "+PORT);
 })
