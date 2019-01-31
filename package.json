@@ -14,8 +14,6 @@
     "movie-trailer": "^1.0.3",
     "request": "^2.83.0",
     "rt-scraper": "^1.0.5"
-  },
-  "devDependencies": {
     "dotenv": "^5.0.1"
   },
   "repository": {
