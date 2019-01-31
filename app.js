@@ -6,6 +6,7 @@ var request = require("request");
 const movieTrailer = require('movie-trailer'); // returns Youtube trailer link
 var rtscraper = require("rt-scraper");  // returns top, coming soon movies to be displayed on homepage
 var apiKey = process.env.API_KEY;
+var PORT = process.env.PORT || 3501;
 
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -69,6 +70,6 @@ app.get("*", function(req, res) {
   res.send("Page not found");
 });
 
-app.listen(3000, function() {
-  console.log("Serving movie-search-app on port 3000");
+app.listen(PORT, function() {
+  console.log("Serving movie-search-app on port "+PORT);
 })
