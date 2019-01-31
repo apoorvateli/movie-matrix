@@ -13,7 +13,7 @@
     "express": "^4.16.1",
     "movie-trailer": "^1.0.3",
     "request": "^2.83.0",
-    "rt-scraper": "^1.0.5"
+    "rt-scraper": "^1.0.5",
     "dotenv": "^5.0.1"
   },
   "repository": {
